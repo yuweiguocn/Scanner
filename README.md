@@ -9,7 +9,7 @@
 添加工程最外层gradle文件中下面的依赖：
 
 ```
-classpath "io.github.yuweiguocn:scanner:1.0.0"
+classpath "io.github.yuweiguocn:scanner:1.0.2"
 ```
 
 在application module的gradle文件中应用插件：
