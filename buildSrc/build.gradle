@@ -1,0 +1,52 @@
+apply plugin: 'groovy'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.8.0'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+    }
+}
+
+apply plugin: 'com.novoda.bintray-release'
+
+publish {
+    userOrg = 'yuweiguocn'//用户名
+    groupId = GROUP_ID//包名
+    artifactId = ARTIFACT_ID//类库名
+    publishVersion = VERSION_ID//版本号
+    desc = 'A class scanner to find a collection of resource ids using reflection.'//描述
+    website = 'https://github.com/yuweiguocn/Scanner'//对应的github网址
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.tools.build:gradle:3.3.1'
+    implementation 'com.google.code.gson:gson:2.8.1'
+    implementation localGroovy()
+    implementation gradleApi()
+}
+
+sourceSets {
+    main {
+        groovy {
+            srcDir 'src/main/groovy'
+        }
+
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
