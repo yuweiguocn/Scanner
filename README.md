@@ -1,5 +1,7 @@
 # ClassScanner
 
+[ ![Download](https://api.bintray.com/packages/yuweiguocn/maven/scanner/images/download.svg?version=1.0.2) ](https://bintray.com/yuweiguocn/maven/scanner/1.0.2/link)
+
 一个使用asm扫描class的gradle插件，用于扫描class中使用反射获取资源的代码，给出可能使用反射获取的资源id，方便进一步将R文件inline内联以减少包大小和dex数量。
 
 你可以使用[ByteX](https://github.com/bytedance/ByteX)提供的插件将R资源inline，ByteX提供了使用资源名称配置白名单的能力。
